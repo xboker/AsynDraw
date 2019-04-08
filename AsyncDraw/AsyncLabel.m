@@ -1,23 +1,23 @@
 //
-//  AsynLabel.m
-//  AsynDraw
+//  AsyncLabel.m
+//  AsyncDraw
 //
 //  Created by xiekunpeng on 2019/4/8.
 //  Copyright © 2019 xboker. All rights reserved.
 //
 
-#import "AsynLabel.h"
+#import "AsyncLabel.h"
 #import <CoreText/CoreText.h>
 
-@implementation AsynLabel
+@implementation AsyncLabel
 
 - (void)displayLayer:(CALayer *)layer {
     /**
      除了在drawRect方法中, 其他地方获取context需要自己创建[https://www.jianshu.com/p/86f025f06d62]
      coreText用法简介:[https://www.cnblogs.com/purple-sweet-pottoes/p/5109413.html]
      */
-      CGSize size = self.bounds.size;;
-      CGFloat scale = [UIScreen mainScreen].scale;
+    CGSize size = self.bounds.size;;
+    CGFloat scale = [UIScreen mainScreen].scale;
     ///异步绘制:切换至子线程
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         UIGraphicsBeginImageContextWithOptions(size, NO, scale);

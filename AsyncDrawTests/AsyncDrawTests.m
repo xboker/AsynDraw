@@ -1,6 +1,6 @@
 //
-//  AsynDrawTests.m
-//  AsynDrawTests
+//  AsyncDrawTests.m
+//  AsyncDrawTests
 //
 //  Created by xiekunpeng on 2019/4/8.
 //  Copyright © 2019 xboker. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface AsynDrawTests : XCTestCase
+@interface AsyncDrawTests : XCTestCase
 
 @end
 
-@implementation AsynDrawTests
+@implementation AsyncDrawTests
 
 - (void)setUp {
     // Put setup code here. This method is called before the invocation of each test method in the class.
